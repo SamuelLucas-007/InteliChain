@@ -5,6 +5,10 @@ import fileSignature from "../../assets/img/file-signature.svg";
 import fileText from "../../assets/img/file-text.svg";
 import wallet from "../../assets/img/wallet.svg";
 import profile from "../../assets/img/user.svg";
+import Viewer from '../../pages/Viewer'; // Import the Viewer component
+import ButtonBitcoin from "../buttonBitcoin/ButtonBitcoin";
+
+
 
 export default function Navbar() {
 	return (
@@ -14,6 +18,9 @@ export default function Navbar() {
 					<h1 className="font-extrabold font-inter text-[#F6911D] text-[40px] -translate-x-8">
 						UnJorn
 					</h1>
+					<div className="w-40 h-40"> {/* Adjust width and height as needed */}
+						<Viewer /> {/* Render the Viewer component here */}
+					</div>
 				</Link>
 			</div>
 			<div className="flex justify-center items-center gap-8 -translate-x-14">
