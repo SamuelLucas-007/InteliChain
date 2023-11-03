@@ -46,7 +46,21 @@ To run the frontend it is necessary to enter the frontend directory `cd frontend
 
 ## Running Backend
 
-For the backend, you should access the `backend` directory using the cd backend command and then execute the `npm install` command. Following that, run the `npm run dev` command. Once completed, the backend will be online.
+to run de backend use the commands below: 
+
+```bash
+$ cd backend
+```
+
+Run the .sh script:
+
+```bash
+$ ./switch_wallet.sh
+```
+
+choose your options and see the magic
+
+[Shell script tutorial](https://youtu.be/kXaoMdDoS-s)
 
 ## License
 
