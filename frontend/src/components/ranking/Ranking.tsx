@@ -1,11 +1,11 @@
 interface RankingProps {
-  data: { name: string; chavePublica: string; image: string;}[];
+  data: { name: string; chavePublica: string; image: string; }[];
   nameCard: string;
 }
 
 export default function Ranking({ data, nameCard }: RankingProps) {
   return (
-    <div className="flex w-60 h-50 bg-[#f9f9f9] flex-col justify-start items-center rounded-xl -translate-x-44 mb- translate-y-6">
+    <div className="fixed top-0 left-0 w-60 h-50 bg-[#f9f9f9] flex flex-col justify-start items-center rounded-xl ml-4 mt-4 translate-x-[1000px] translate-y-[160px]">
       <h1 className="text-black text-center font-inter font-bold text-3xl mb-4 mt-4">{nameCard}</h1>
       <ul className="text-black text-center text-xl">
         {data.map((item, index) => (
