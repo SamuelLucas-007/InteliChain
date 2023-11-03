@@ -30,7 +30,6 @@ export default function HomePage() {
 			<div className="fixed right-2 flex flex-col gap-1">
 					<Ranking data={data} nameCard="Top View"  />
 					<Ranking data={data} nameCard="Top Sats"/>
-					<ButtonBitcoin />
 			</div>
 		</>
 	);
