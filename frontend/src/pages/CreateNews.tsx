@@ -43,7 +43,7 @@ export interface Metadata {
 	nip05?: string;
 }
 
-export default function CreateNews( {hashtag}: Props) {
+export default function CreateNews() {
   const location = useLocation();
   const path = location.pathname;
 
@@ -150,7 +150,7 @@ export default function CreateNews( {hashtag}: Props) {
               hashtags={hashtags}
               onChange={setHashtags} w={undefined}						/>
 					</div>
-					<NotesList notes={events} metadata={metadata} />
+					{/* <NotesList notes={events} metadata={metadata} /> */}
 				</div>
 			</div>
 		);

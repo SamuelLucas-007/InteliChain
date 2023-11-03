@@ -44,11 +44,6 @@ export default function NoteCard({
     const wallet = texto.substring(walletInicio, walletFim).trim();
     const tags = texto.substring(tagsInicio, tagsFim).trim();
 
-    console.log("Title:", title);
-    console.log("Image:", image);
-    console.log("Content:", conteudo);
-    console.log("Wallet:", wallet);
-    console.log("Tags:", tags);
     if(title && image && conteudo && wallet && tags && tituloInicio >= 7 && imagemInicio >= 7 && conteudoInicio >= 9 && walletInicio >= 8 && tagsInicio >= 6 ) {
       return (
       
