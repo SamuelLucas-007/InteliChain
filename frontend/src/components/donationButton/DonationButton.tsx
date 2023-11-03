@@ -2,6 +2,9 @@ import QRCode from "qrcode.react";
 import vec from "../../assets/img/Vector.svg";
 import { useState } from "react";
 import Modal from "react-modal";
+import api from "@/api/api";
+
+import axios from "axios";
 
 Modal.setAppElement("#root"); // Define o elemento raiz do aplicativo
 
@@ -20,11 +23,30 @@ const customStyles = {
 };
 
 export default function DonationButton({ data }: { data: string }) {
+
+  async function createInvoice() {
+    try {
+      const response = await api.post('/invoice', {
+        journalistKey: "cb3fa1bb63f24298bba79d1dbc3380f3",
+      },
+      {
+        headers: {
+          'X-Api-Key': `${"328c63b3a3904fb7bbbde3630be2d508"}`,
+        },
+      });
+  
+      const data = response.data;
+      console.log(data)
+      generateQRCode(response.data.payment_request);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const [qrData, setQRData] = useState(data);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const generateQRCode = () => {
-    const newQRData = "Novo hash de dados"; // Substitua isso pela lógica real de geração
+  const generateQRCode = (newQRData: string) => {
     setQRData(newQRData);
     setIsModalOpen(true);
   };
@@ -36,7 +58,7 @@ export default function DonationButton({ data }: { data: string }) {
   return (
     <div>
       <button
-        onClick={generateQRCode}
+        onClick={createInvoice}
         className="bg-[#F6911D] w-[130px] h-[60px] rounded-full flex items-center justify-center"
       >
         <img src={vec} alt="Logo pegasus" className="w-6 h-6" />

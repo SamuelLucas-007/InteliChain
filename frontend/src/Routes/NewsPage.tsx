@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@radix-ui/react-dropdown-menu";
 import { useState } from "react";
 
+
 export default function NewsPage() {
   const [message, setMessage] = useState("");
 
