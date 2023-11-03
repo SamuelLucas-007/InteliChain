@@ -1,3 +1,5 @@
+import React from "react";
+import ButtonBitcoin from "@/components/buttonBitcoin/ButtonBitcoin";
 import Navbar from "@/components/navbar/Navbar";
 import Ranking from "@/components/ranking/Ranking";
 import { TabsDemo } from "@/components/sections";
@@ -25,6 +27,7 @@ export default function HomePage() {
     <div>
         <Navbar/>
         <Ranking data={data} />
+        <ButtonBitcoin />
         <TabsDemo/>
     </div>
   );

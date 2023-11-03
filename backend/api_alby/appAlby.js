@@ -2,9 +2,9 @@
 const express = require('express');
 const app = express();
 
-const apiRoutes = require('./api_alby/routes/apiRoutesAlby');
+const apiRoutes = require('./routes/apiRoutesAlby');
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 3334;
 
 app.use(express.json());
 app.use('/api', apiRoutes);
