@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@getalby/bitcoin-connect-react": "^2.3.1",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
@@ -21,10 +22,12 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.291.0",
+    "qrcode.react": "^3.1.0",
     "nostr-tools": "^1.17.0",
     "react": "^18.2.0",
     "react-crypto-price": "^0.2.2",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.18.0",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
@@ -34,6 +37,7 @@
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "@types/react-modal": "^3.16.2",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",

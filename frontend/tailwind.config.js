@@ -15,6 +15,12 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      space: ["Space Grotesk"],
+      inter: ["Inter","sans-serif"],
+      sans: ['Roboto', 'sans-serif'],
+    },
+
     extend: {
       colors: {
         border: "hsl(var(--border))",
