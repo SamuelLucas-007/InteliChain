@@ -1,3 +1,5 @@
+import React from "react";
+import ButtonBitcoin from "@/components/buttonBitcoin/ButtonBitcoin";
 import Navbar from "@/components/navbar/Navbar";
 import Ranking from "@/components/ranking/Ranking";
 
@@ -22,8 +24,9 @@ const data = [
 export default function HomePage() {
   return (
     <div>
-        <Navbar/>
-        <Ranking data={data} />
+      <Navbar />
+      <Ranking data={data} />
+      <ButtonBitcoin />
     </div>
   );
 }
