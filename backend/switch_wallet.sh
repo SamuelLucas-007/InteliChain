@@ -31,7 +31,7 @@ handle_choice() {
         export WALLET_HASH=$wallet_hash
         echo "O hash da sua carteira foi salvo como uma variável de ambiente."
 
-        node lnbits.js
+        npm run dev
         ;;
     
     2)

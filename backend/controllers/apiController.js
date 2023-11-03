@@ -1,7 +1,7 @@
 const axios = require('axios');
 require('dotenv').config();
 
-const userKey = process.env.USER_KEY;
+const userKey = process.env.WALLET_HASH;
 const baseUrl = process.env.BASE_URL;
 
 async function fetchWalletInfo(req, res) {
