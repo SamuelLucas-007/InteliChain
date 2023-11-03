@@ -15,7 +15,7 @@ import Test from "@/pages/Test";
 import { useEffect, useState } from "react";
 
 export function TabsDemo() {
-  const [selectedTab, setSelectedTab] = useState<string>("word");
+  const [selectedTab, setSelectedTab] = useState<string>("world");
   const [hashtag, setHashtag] = useState<string[]>([]);
 
   const handleTabClick = (tab: string) => {

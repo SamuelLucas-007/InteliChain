@@ -5,6 +5,7 @@ import like from "../assets/like.svg";
 import dislike from "../assets/dislike.svg";
 import zap from "../assets/zap.svg";
 import eye from "../assets/eye.svg";
+import { Link } from "react-router-dom";
 
 interface Props {
   content: string;
@@ -108,12 +109,12 @@ export default function NoteCard({
             <img src={dislike} width="30" height="30"></img>
           </div>
           <div className="flex gap-10">
-            <button className="border-radius-post-buttons pt-3 pb-3 pl-9 pr-9 orange-chain">
-              <img src={zap} width="25" height="25" />
-            </button>
-            <button className="border-radius-post-buttons pt-3 pb-3 pl-9 pr-9 orange-chain">
-              <img src={eye} width="25" height="25" />
-            </button>
+            <Link to="/newspage" className="rounded-lg bg-[#F6911D] w-[53px] h-[40px] text-black pt-3 pb-3 pl-9 pr-9">
+              <img src={zap} width="25" height="25" className="bg-black" />
+            </Link>
+            <Link to="/newspage" className="rounded-lg bg-[#F6911D] w-[53px] h-[40px] text-black pt-3 pb-3 pl-9 pr-9">
+              <img src={eye} width="25" height="25" className="bg-black" />
+            </Link>
           </div>
         </div>
         

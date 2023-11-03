@@ -62,10 +62,10 @@ const PostCard: React.FC <PostProps> = ({ post }) => {
           <img src={dislike} width="30" height="30"></img>
         </div>
         <div className="flex gap-10">
-          <button className="border-radius-post-buttons pt-3 pb-3 pl-9 pr-9 orange-chain">
-            <img src={zap} width="25" height="25"/>
+          <button className="rounded-lg bg-[#F6911D] w-[53px] h-[40px] pt-3 pb-3 pl-9 pr-9">
+            <img src={zap} width="50" height="50"/>
           </button>
-          <button className="border-radius-post-buttons pt-3 pb-3 pl-9 pr-9 orange-chain" >
+          <button className="rounded-lg bg-[#F6911D] w-[53px] h-[40px] pt-3 pb-3 pl-9 pr-9" >
             <img src={eye} width="25" height="25" />
           </button>
         </div>
