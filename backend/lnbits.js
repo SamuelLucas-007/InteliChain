@@ -1,6 +1,6 @@
 const axios = require('axios');
-
-const apiKey = '5028692a8de54807b74eab1781a826bd';
+require('dotenv').config();
+const apiKey = process.env.WALLET_HASH;
 const baseUrl = 'https://legend.lnbits.com';
 const paymentRequest = 'lnbc20n1pj5gt7gsp5qs6xlr55klefcwzxc9t6dp494nsx0n0kqdy02qcn3uc5q4xs6gcspp5cypwmckwrdldz5anartn67ay3rdlyh7evuwzrwd3exjaaqj7naksdq2f38xy6t5wvxqzjccqpjrzjqvqgcn3kd2g6f574a3y7pz2gq2nkjjj30y5tpfqxswky69mqlyn8kzuv75qq35sqqqqqqq86qqqqqqgq9q9qxpqysgqm29s6xptr5cu2rmxw4n8snuueyk0dhcwe3m0z9r95fme4wn0gsxryjmc4ajpqkahyc9xxlth7shsd7tpugte7dfjpxvulvlahrg9fzspmdnpzx'
 
@@ -18,6 +18,8 @@ function getSaldo(apiKey, baseUrl) {
       console.error(error);
     });
 }
+
+getSaldo();
 
 function createPay(apiKey, baseUrl) {
     // Criar uma fatura
