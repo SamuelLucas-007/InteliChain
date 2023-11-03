@@ -15,6 +15,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
+import PostCard from "./postcard"
 
 export function TabsDemo() {
   return (
@@ -32,7 +33,9 @@ export function TabsDemo() {
         <TabsTrigger value="newsletter" style={{ marginLeft: 'auto', fontWeight: 'bold' }}>Newsletter</TabsTrigger>
       </TabsList>
       <TabsContent value="word">
-        <Label htmlFor="news">Cards do phd sobre mundo</Label>
+        <Label htmlFor="news">
+          <PostCard />
+        </Label>
       </TabsContent>
       <TabsContent value="asia">
         <Label htmlFor="news">Cards do phd sobre asia</Label>
