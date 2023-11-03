@@ -47,9 +47,9 @@ export default function Navbar() {
 				</ul>
 			</div>
 			<div className="flex items-center justify-between gap-5 translate-x-10">
-					<button className="bg-[#F6911D] w-[70px] h-[40px] rounded-3xl flex items-center justify-center">
+					<Link to="/create" className="bg-[#F6911D] w-[93px] h-[40px] rounded-3xl flex items-center justify-center">
 						<img src={fileSignature} alt="Logo pegasus" className="w-8 h-6" />
-					</button>
+					</Link>
 					<img src={wallet} alt="Logo pegasus" className="w-8 h-10 flex justify-center" />
 					<button className="bg-[#F6911D] w-[200px] h-[40px] rounded-xl  flex items-center justify-center">
 						Connect Wallet

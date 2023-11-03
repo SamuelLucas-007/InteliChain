@@ -15,17 +15,21 @@
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
+    "axios": "^1.6.0",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.291.0",
     "qrcode.react": "^3.1.0",
+    "nostr-tools": "^1.17.0",
     "react": "^18.2.0",
     "react-crypto-price": "^0.2.2",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.18.0",
     "tailwind-merge": "^2.0.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "use-debounce": "^9.0.4"
   },
   "devDependencies": {
     "@types/node": "^20.8.10",

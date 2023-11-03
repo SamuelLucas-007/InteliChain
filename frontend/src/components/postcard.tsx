@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bitcoin from "../assets/bitcoin.svg";
 import intelib from "../assets/intelib.svg";
 import comment from "../assets/message-circle.svg";
@@ -6,9 +6,34 @@ import like from "../assets/like.svg";
 import dislike from "../assets/dislike.svg";
 import zap from "../assets/zap.svg";
 import eye from "../assets/eye.svg";
+import { getPostsRelays } from "../services/filter_news"
 import "./postcard.css"
 
-const PostCard: React.FC = () => {
+
+interface PostProps {
+  post: {
+    title: string;
+    npub: string;
+    date: string;
+    content: string;
+    // ... outras propriedades do post ...
+  };
+}
+
+const PostCard: React.FC <PostProps> = ({ post }) => {
+//   const [posts, setPosts] = useState(null);
+
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//         const data = await getPostsRelays();
+//         setPosts(data);
+//     };
+
+//     fetchData();
+// }, []);
+
+
   return (
     <div className="bg-white border-2 border-solid border-gray-200 shadow p-10 rounded w">
       <div className="flex justify-between items-center">
@@ -27,13 +52,7 @@ const PostCard: React.FC = () => {
           <img className="mt-4" src={bitcoin} width="350" height="350"/>
         </div>
         <p className="mt-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          placerat odio nec nunc cursus, i n rhoncus ligula faucibus. Sed
-          tincidunt, elit eu tincidunt dictum, ligula ex luctus ex, in ultricies
-          arcutellus non libero. Sed malesuada tincidunt nunc, sit amet
-          ullamcorper lorem dignissim sit amet. Vivamus tristique, ante eget
-          bibendum eleifend, felis libero suscipit libero, nec lacinia
-          urna.......
+          {post.content}
         </p>
       </div>
       <div className="flex justify-between mt-10">
@@ -55,4 +74,28 @@ const PostCard: React.FC = () => {
   );
 };
 
-export default PostCard;
+
+const PostList = () => {
+  const [posts, setPosts] = useState<PostProps[] | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+        const data = await getPostsRelays();
+        setPosts(data);
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {posts ? (
+        posts.map((post: any, index: any) => <PostCard key={index} post={post} />)
+      ) : (
+        <p>Carregando posts...</p>
+      )}
+    </div>
+  );
+};
+
+export default PostList;

@@ -5,7 +5,7 @@ export default function Layout() {
   return (
     <div className="w-full h-full">
       <Navbar />
-      <main className="max-h-screen ">
+      <main className="max-h-screen">
         <Outlet />
       </main>
     </div>
