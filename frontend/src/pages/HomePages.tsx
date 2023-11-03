@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import Ranking from "@/components/ranking/Ranking";
+import { TabsDemo } from "@/components/sections";
 
 const data = [
   {
@@ -24,6 +25,7 @@ export default function HomePage() {
     <div>
         <Navbar/>
         <Ranking data={data} />
+        <TabsDemo/>
     </div>
   );
 }
