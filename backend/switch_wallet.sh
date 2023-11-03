@@ -22,6 +22,7 @@ display_menu() {
 
 # Função para lidar com a escolha do usuário
 handle_choice() {
+  npm i
   read -p "Escolha uma opção: " choice
   case $choice in
     1)
@@ -30,8 +31,8 @@ handle_choice() {
         read -p "Digite o hash da sua carteira LNBits: " wallet_hash
         export WALLET_HASH=$wallet_hash
         echo "O hash da sua carteira foi salvo como uma variável de ambiente."
-
-        npm run dev
+        
+        npm run start_Lnbit
         ;;
     
     2)
@@ -41,7 +42,7 @@ handle_choice() {
         export WALLET_HASH=$wallet_hash
         echo "O hash da sua carteira foi salvo como uma variável de ambiente."
 
-        node alby.js
+        npm run start_alby
         ;;
     3)
         selected_api="${api_mapping[$choice]}"
@@ -60,6 +61,16 @@ handle_choice() {
   esac
 
 }
+
+# Função para lidar com sinais SIGINT e SIGTERM
+cleanup() {
+  echo "Cleaning up..."
+  # Faça qualquer ação de limpeza necessária aqui
+  exit
+}
+
+# Registre a função cleanup para os sinais SIGINT (Ctrl+C) e SIGTERM (fechar o terminal)
+trap cleanup INT TERM
 
 # Loop para exibir o menu e lidar com as escolhas do usuário
 while true; do

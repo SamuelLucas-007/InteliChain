@@ -1,12 +1,37 @@
 import PostCard from "@/components/postcard";
+import React from "react";
+import ButtonBitcoin from "@/components/buttonBitcoin/ButtonBitcoin";
+import Navbar from "@/components/navbar/Navbar";
+import Ranking from "@/components/ranking/Ranking";
 
-export default function HomePage(){
-    return (
-        <><div>
-            <h1>Home dsdadasdadasPage</h1>
-        </div>
-        <div>
+const data = [
+  {
+    name: "MaceloMaia?",
+    chavePublica: "bc1p2...72lnnk",
+    image: "../assets/img/inteliblockchain.png",
+  },
+  {
+    name: "OutroMaceloMaia",
+    chavePublica: "bc1p2...72lnnk",
+    image: "../assets/img/inteliblockchain.png",
+  },
+  {
+    name: "OMaceloMaia",
+    chavePublica: "bc1p2...72lnnk",
+    image: "../assets/img/inteliblockchain.png",
+  },
+];
+
+export default function HomePage() {
+  return (
+    <div>
+      <Navbar />
+      <Ranking data={data} />
+      <ButtonBitcoin />
+      <div>
             <PostCard />
-        </div></>
-    )
+        </div>
+    </div>
+  );
 }
+

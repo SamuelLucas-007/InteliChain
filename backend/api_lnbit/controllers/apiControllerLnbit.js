@@ -4,10 +4,15 @@ require('dotenv').config();
 const userKey = process.env.WALLET_HASH;
 const baseUrl = process.env.BASE_URL;
 
+userKeyAlby = process.env.USER_KEY_ALBY;
+journalistKeyAlby = process.env.JOURNALIST_KEY_ALBY;
+baseUrlAlby = process.env.BASE_URL_ALBY;
+
 async function fetchWalletInfo(req, res) {
   try {
+    console.log(userKey)
     const response = await axios.get(
-      `${baseUrl}/api/v1/wallet`, {
+      `${baseUrl}/wallet`, {
         headers: {
           'X-Api-Key': userKey
         }
@@ -23,40 +28,17 @@ async function createInvoice(req, res) {
   try {
     const { journalistKey } = req.body;
     const response = await axios.post(
-      `${baseUrl}/api/v1/payments`, {
+      `${baseUrl}/payments`, {
         out: false,
         amount: 1
       }, {
         headers: {
-          'X-Api-Key': journalistKey
+          'X-Api-Key': journalistKey // deve vir do frontend
         }
       });
       const data = response.data;
       const paymentHash = response.data.payment_hash;
       console.log(response.data);
-
-      // Verificar se a fatura foi paga
-      async function checkPaymentStatus() {
-        try {
-          const paymentResponse = await axios.get(`${baseUrl}/api/v1/payments/${paymentHash}`, {
-            headers: {
-              'X-Api-Key': userKey
-            }
-          });
-          if (paymentResponse.data.paid) {
-            console.log('Pago!');
-            res.status(200).json(data);
-          } else {
-            console.log('Ainda não foi pago...');
-            setTimeout(checkPaymentStatus, 1000); // Verificar novamente após 1 segundo
-          }
-        } catch (error) {
-         console.error(error);
-         res.status(500).json({ message: error.message });
-        }
-      }
-
-      checkPaymentStatus();
       res.status(200).json(data);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -67,7 +49,7 @@ async function payInvoice(req, res) {
   try {
     const { payment_request } = req.body;
     const response = await axios.post(
-      `${baseUrl}/api/v1/payments`, {
+      `${baseUrl}/payments`, {
         out: true,
         bolt11: payment_request
       }, {
