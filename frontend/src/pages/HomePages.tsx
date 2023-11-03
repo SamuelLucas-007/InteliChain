@@ -1,7 +1,10 @@
+import ButtonBitcoin from "@/components/buttonBitcoin/ButtonBitcoin";
+import Navbar from "@/components/navbar/Navbar";
+
 export default function HomePage(){
     return (
         <div>
-            <h1>Home dsdadasdadasPage</h1>
+            <Navbar></Navbar>
         </div>
     )
 }
