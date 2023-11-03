@@ -1,8 +1,6 @@
 # UnJorn - Decentralized Social Network
 ## UnJorn - Hackathon SatsConf 2023 - Social Network for Independent Jornalist
 
-![Descrição da imagem](URL_da_imagem)
-
 ## Our Solution:
 
 UnJorn, the social network, harnesses the power of Nostr and Lightning Network technologies to ensure the ownership and security of independent journalists, enabling them to report on issues such as corruption, war, dictatorship, repression, and more.
