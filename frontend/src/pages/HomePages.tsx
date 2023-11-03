@@ -1,3 +1,6 @@
+import PostCard from "@/components/postcard";
+import React from "react";
+import ButtonBitcoin from "@/components/buttonBitcoin/ButtonBitcoin";
 import Navbar from "@/components/navbar/Navbar";
 import Ranking from "@/components/ranking/Ranking";
 
@@ -23,6 +26,11 @@ export default function HomePage() {
   return (
     <div>
         <Ranking data={data} />
+        <ButtonBitcoin />
+      <div>
+            <PostCard />
+        </div>
     </div>
   );
 }
+
