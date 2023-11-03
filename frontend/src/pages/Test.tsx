@@ -43,7 +43,7 @@ export interface Metadata {
 	nip05?: string;
 }
 
-export default function CreateNews() {
+export default function Test( {hashtag}: Props) {
   const location = useLocation();
   const path = location.pathname;
 
@@ -57,7 +57,7 @@ export default function CreateNews() {
 
 	const metadataFetched = useRef<Record<string, boolean>>({});
 
-	const [hashtags, setHashtags] = useState<string[]>([]);
+	const hashtags = hashtag;
 
 	// setup a relays pool
 
@@ -78,7 +78,7 @@ export default function CreateNews() {
 		const sub = pool.sub(RELAYS, [
 			{
 				kinds: [1],
-				limit: 100,
+				limit: 20,
 				"#t": hashtags || hashtag,
 			},
 		]);
@@ -128,31 +128,11 @@ export default function CreateNews() {
 	}, [events, pool]);
 
 	if (!pool) return null;
-
-	if (path === "/") {
 		return (
 			<div className="w-full flex justify-center">
 				<div className="flex flex-col items-center w-5/6">
 					<NotesList notes={events} metadata={metadata} />
 				</div>
 			</div>
-		);
-	} else {
-		return (
-			<div className="w-full flex justify-center">
-				<div className="flex flex-col items-center w-5/6">
-					<h1 className="pb-5 font-bold text-4xl w-3/4 text-left">
-						Create News
-					</h1>
-					<div className="bg-gray-100 w-5/6 border-zinc-400 rounded-lg border-2 mb-4">
-						<CreateNote
-              pool={pool}
-              hashtags={hashtags}
-              onChange={setHashtags} w={undefined}						/>
-					</div>
-					{/* <NotesList notes={events} metadata={metadata} /> */}
-				</div>
-			</div>
-		);
-	}
+    );
 }

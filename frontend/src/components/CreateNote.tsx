@@ -95,6 +95,8 @@ export default function  CreateNote({ pool, hashtags, onChange }: Props) {
     }
   }
 
+  
+
   return (
     <div className=" pb-10">
       <form onSubmit={onSubmit}>

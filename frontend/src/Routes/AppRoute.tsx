@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import HomePage from "../pages/HomePages";
 import NewsPage from "./NewsPage";
 import CreateNews from "@/pages/CreateNews";
+import Viewer from "../pages/Viewer.tsx";
 
 export default function AppRoutes() {
 
@@ -13,6 +14,7 @@ export default function AppRoutes() {
           <Route path="/" element={<HomePage />} />
           <Route path="/newspage" element={<NewsPage />} />
           <Route path="/create" element={<CreateNews/>} />
+          <Route path="/profile" element={<Viewer />} />
         </Route>
       </Routes>
     </BrowserRouter>

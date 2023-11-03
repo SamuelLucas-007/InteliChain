@@ -10,64 +10,89 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useLocation } from "react-router"
+import Test from "@/pages/Test"
+import { useEffect, useState } from "react"
+
 
 export function TabsDemo() {
+
+  const [selectedTab, setSelectedTab] = useState<string>("word")
+  const [hashtag, setHashtag] = useState<string[]>([])
+
+  const handleTabClick = (tab: string) => {
+    setSelectedTab(tab)
+    setHashtag([tab])
+  }
+
+  const location = useLocation();
+  console.log(location.pathname)
+
+  console.log(hashtag)
+
+  useEffect(() => {
+
+    setHashtag([selectedTab]);
+  }, [selectedTab]);
   return (
-    <div className="flex items-center justify-start">
-      <h1 className="text-[25px] font-italic font-extrabold">News</h1>
-      <Tabs
-        defaultValue="account"
-        className="flex items-start w-[700px] -translate-x-20 translate-y-14 border bg-white rounded-md text-black"
-      >
-        {/* <Label htmlFor="news" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>News</Label> */}
-        <TabsList className="flex space-x-7 bg-white text-black font-inter font-bold text-[100px]">
-          <TabsTrigger value="world" className="font-inter font-bold">
-            World
-          </TabsTrigger>
-          <TabsTrigger value="asia" className="font-inter font-bold">
-            Asia
-          </TabsTrigger>
-          <TabsTrigger value="africa" className="font-inter font-bold">
-            Africa
-          </TabsTrigger>
-          <TabsTrigger value="war" className="font-inter font-bold">
-            War
-          </TabsTrigger>
-          <TabsTrigger value="censorship" className="font-inter font-bold">
-            Censorship
-          </TabsTrigger>
-          <TabsTrigger value="newsletter"  className="font-inter font-bold styled-">
-            Newsletter
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="world" className="flex flex-row white-background ">
-          <Label htmlFor="news">Cards do phd sobre mundo</Label>
-        </TabsContent>
-        <TabsContent value="asia">
-          <Label htmlFor="news">Cards do phd sobre asia</Label>
-        </TabsContent>
-        <TabsContent value="africa">
-          <Label htmlFor="news">Cards do phd sobre africa</Label>
-        </TabsContent>
-        <TabsContent value="america">
-          <Label htmlFor="news">Cards do phd sobre america</Label>
-        </TabsContent>
-        <TabsContent value="europe">
-          <Label htmlFor="news">Cards do phd sobre europa</Label>
-        </TabsContent>
-        <TabsContent value="war">
-          <Label htmlFor="news">Cards do phd sobre guerra</Label>
-        </TabsContent>
-        <TabsContent value="censorship">
-          <Label htmlFor="news">Cards do phd sobre censura</Label>
-        </TabsContent>
-        <TabsContent value="dictatorship">
-          <Label htmlFor="news">Cards do phd sobre ditadura</Label>
-        </TabsContent>
-        <TabsContent value="newsletter">
-          <Label htmlFor="news">Cards do phd sobre newletter</Label>
-        </TabsContent>
-      </Tabs>
-    </div>
-  );
+    <Tabs defaultValue={selectedTab} className="w-[1000px] -translate-x-7 flex flex-col justify-center">
+      <Label htmlFor="news" style={{ fontWeight: 'bold', fontSize: '1.2rem' }} className="pb-4">News</Label>
+      <TabsList className="flex space-x-4 max-w-5xl">
+        <TabsTrigger value="world" onClick={() => handleTabClick("world")}>World</TabsTrigger>
+        <TabsTrigger value="asia" onClick={() => handleTabClick("asia")}>Asia</TabsTrigger>
+        <TabsTrigger value="africa" onClick={() => handleTabClick("africa")}>Africa</TabsTrigger>
+        <TabsTrigger value="america" onClick={() => handleTabClick("america")}>America</TabsTrigger>
+        <TabsTrigger value="europe" onClick={() => handleTabClick("europe")}>Europe</TabsTrigger>
+        <TabsTrigger value="war" onClick={() => handleTabClick("war")}>War</TabsTrigger>
+        <TabsTrigger value="censorship" onClick={() => handleTabClick("censorship")}>Censorship</TabsTrigger>
+        <TabsTrigger value="dictatorship" onClick={() => handleTabClick("dictatorship")}>Dictatorship</TabsTrigger>
+        <TabsTrigger value="newsletter" style={{ marginLeft: 'auto', fontWeight: 'bold' }}>Newsletter</TabsTrigger>
+      </TabsList>
+      <TabsContent value="world" onClick={() => handleTabClick("world")}>
+        <Label htmlFor="news">
+          <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+      <TabsContent value="asia" onClick={() => handleTabClick("asia")}>
+        <Label htmlFor="news">
+        <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+      <TabsContent value="africa" onClick={() => handleTabClick("africa")}>
+        <Label htmlFor="news">
+        <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+      <TabsContent value="america" onClick={() => handleTabClick("america")}>
+        <Label htmlFor="news">
+        <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+      <TabsContent value="europe" onClick={() => handleTabClick("europe")}>
+        <Label htmlFor="news">
+        <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+      <TabsContent value="war">
+        <Label htmlFor="news">
+        <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+      <TabsContent value="censorship">
+        <Label htmlFor="news">
+        <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+      <TabsContent value="dictatorship">
+        <Label htmlFor="news">
+        <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+      <TabsContent value="newsletter">
+        <Label htmlFor="news">
+        <Test hashtag={hashtag}/>
+        </Label>
+      </TabsContent>
+    </Tabs>
+  )
 }
