@@ -1,13 +1,9 @@
 import './App.css'
-import { ModeToggle } from './components/mode-toggle'
-import { ThemeProvider } from './components/theme-provider'
+import AppRoutes from './Routes/AppRoute'
 
 function App({ children }: { children: React.ReactNode }) {
-
   return (
-    <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
-      <ModeToggle />
-    </ThemeProvider>
+      <AppRoutes />
   )
 }
 
