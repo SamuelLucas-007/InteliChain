@@ -24,7 +24,7 @@ export default function ButtonBitcoin() {
 
   return (
     <div>
-      <div className="w-[230px] h-[50px] bg-[#F6911D] rounded-2xl flex items-center -translate-x-10">
+      <div className="w-[230px] h-[50px] bg-[#F6911D] rounded-2xl flex items-center -translate-x-40 translate-y-20">
         <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center" style={imageStyle}>
           <img
             src={bitcoin}

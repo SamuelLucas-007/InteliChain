@@ -27,13 +27,13 @@ export default function NewsPage() {
 
   return (
     <div className="flex">
-      <div className="h-[2000px] border-[#EEEEEE] border rounded-lg flex flex-col items-center ">
+      <div className="h-[1600px] border-[#EEEEEE] border rounded-lg flex flex-col items-center ">
         <div className="flex  justify-between w-full">
           <Link to="/">
             <img src={voltar} className="m-4" />
           </Link>
           <div className="flex flex-col items-center">
-            <p className="text-[20px] translate-y-3 -translate-x-7">
+            <p className="text-[20px] font-inter translate-y-3 -translate-x-7">
               November 3
             </p>
             <div className="translate-y-6 -translate-x-7">
@@ -43,24 +43,24 @@ export default function NewsPage() {
         </div>
 
         <div className="flex flex-row justify-between w-full">
-          <div className="flex items-center pt-4 pl-4">
+          <div className="flex items-center translate-x-16 -translate-y-6">
             <img
               src={inteliblockchain}
-              className="w-[70px] h-[70px] rounded-full mr-2"
+              className="w-[60px] h-[60px] rounded-full mr-2"
             />
-            <p className="text-[30px] translate-x-6">
-              The Splanning<span className="text-[20px] mr-8"></span>
+            <p className="text-[20px] font-inter font-bold translate-x-6">
+              The Splanning<span className="text-[17px] mr-8"></span>
             </p>
-            <p className="text-[20px] mr-8 translate-x-4">npub1..khlak</p>
+            <p className="text-[15px] font-inter mr-8 translate-x-4">npub1..khlak</p>
           </div>
         </div>
 
         <div className="flex flex-col items-center">
-          <h1 className="text-[35px]"> The Title of the New Notice</h1>
-          <img src={bitcoin} />
+          <h1 className="text-[28px] font-inter font-bold"> The Title of the New Notice</h1>
+          <img className="translate-y-8 w-[600px] h-[350px] " src={bitcoin} />
         </div>
         <div className="w-3/4 flex justify-center items-center translate-y-14">
-          <p className="flex text-justify">
+          <p className="flex text-justify font-inter">
             istique, ante eget bibendum eleifend,
             felis libero suscipit libero, nec lacinia urna turpis a sapien.
             Vestibulum cursus nulla nec eros efficitur tincidunt. Quisque
@@ -98,7 +98,7 @@ export default function NewsPage() {
           </p>
         </div>
         <div className="translate-y-32 -translate-x-40 flex flex-col items-start">
-          <label htmlFor="message" className="label font-bold text-[20px]">
+          <label htmlFor="message" className="label font-inter font-bold text-[20px]">
             Your Message:
           </label>
           <textarea
@@ -110,7 +110,7 @@ export default function NewsPage() {
             value={message}
             onChange={handleMessageChange}
           ></textarea>
-          <button onClick={handleSendMessage} className="translate-y-7 send-button text-white bg-black w-[430px] h-[60px] rounded-md  flex items-center justify-center">
+          <button onClick={handleSendMessage} className="translate-y-7 text-[18px] font-inter font-medium send-button text-white bg-black w-[630px] h-[55px] rounded-md  flex items-center justify-center">
             Sent for 100 Satoshis
           </button>
         </div>
