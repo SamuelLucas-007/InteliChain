@@ -23,18 +23,18 @@ function Viewer() {
     <div className='w-full h-full'>
       <Canvas>
         <ambientLight intensity={3} />
-        <directionalLight position={[-200, 20, 5]} intensity={50} />
+        <directionalLight position={[-30, 50, 5]} intensity={50} />
         <pointLight position={[-5, -10, 200]} />
         <Model />
         <OrbitControls
           enableZoom={true} // Permitir zoom
           enablePan={true} // Permitir panorâmica
           enableRotate={true} // Permitir rotação
-          minPolarAngle={Math.PI / 8} // Ângulo mínimo de rotação vertical
+          minPolarAngle={Math.PI / 10} // Ângulo mínimo de rotação vertical
           maxPolarAngle={Math.PI / 1} // Ângulo máximo de rotação vertical
           minDistance={10} // Distância mínima da câmera
           maxDistance={200} // Distância máxima da câmera
-          target={[100, 40, 0]} // Alvo da câmera (posição inicial)
+          target={[-110, 60, -40]} // Alvo da câmera (posição inicial)
         />
       </Canvas>
     </div>
