@@ -13,13 +13,14 @@ The Nostr technology plays a pivotal role in decentralizing the UnJorn network, 
 
 Furthermore, the Lightning Network provides an effective solution to the payment issue. Independent journalists often face challenges in receiving payment for their work in areas where traditional financial institutions may be inaccessible or unreliable. The Lightning Network enables quick and secure payment transactions, ensuring that these professionals receive due recognition for their efforts.
 
-UnJorn not only focuses on protecting and supporting independent journalists but also on bringing critical and frequently hidden issues to the forefront. By providing a secure environment and a dependable payment structure, this social network empowers these professionals to expose abuses, corruption, and human rights violations, thereby contributing to a more informed and conscious global community.
+The platform not only focuses on protecting and supporting independent journalists but also on bringing critical and frequently hidden issues to the forefront. By providing a secure environment and a dependable payment structure, this social network empowers these professionals to expose abuses, corruption, and human rights violations, thereby contributing to a more informed and conscious global community.
 
-UnJorn represents an innovative and necessary response to independent journalism in a rapidly changing world where freedom of expression and truth are essential values. With technologies like Nostr and Lightning Network, it becomes a powerful tool for independent journalists who are willing to risk everything to keep us informed about the most pressing issues of our time.
+UnJorn website represents an innovative and necessary response to independent journalism in a rapidly changing world where freedom of expression and truth are essential values. With technologies like Nostr and Lightning Network, it becomes a powerful tool for independent journalists who are willing to risk everything to keep us informed about the most pressing issues of our time.
 
 ## Documentation
 
-The documentation with information about the project overview, business analysis, system requirements, and system development can be found by clicking here
+The documentation with information about the project overview, business analysis, system requirements, and system development can be found by <a href="https://docs.google.com/document/d/1aclZiAr7EfSIRo1bg41LDf0NBENUc4BH9Yf_STue-Yc/edit?usp=sharing">Clickring here</a>
+
 
 ## Technologies
 - Lightning
@@ -33,15 +34,25 @@ The documentation with information about the project overview, business analysis
 - Css
 - Node Js
 
-## System Architecture
-
-![Descrição da imagem](URL_da_imagem)
-
 ## Running the application
 
-To run the decentralized social network, it is necessary to install:
+To run the decentralized social network, it is necessary to clone the repository and install:
 
 - Node Js
+
+## Running Frontend
+
+To run the frontend it is necessary to enter the frontend directory `cd frontend` and run the `npm install` command, after that, run the `npm run dev` command. With this, we can open the frontend locally. 
+
+## Running Backend
+
+For the backend, you should access the `backend` directory using the cd backend command and then execute the `npm install` command. Following that, run the `npm run dev` command. Once completed, the backend will be online.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
 
 
 
