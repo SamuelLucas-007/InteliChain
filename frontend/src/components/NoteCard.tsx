@@ -3,7 +3,7 @@ import { useState } from "react";
 import comment from "../assets/message-circle.svg";
 import like from "../assets/like.svg";
 import dislike from "../assets/dislike.svg";
-import zap from "../assets/zap.svg";
+import zap from "../assets/img/Vector.svg";
 import eye from "../assets/eye.svg";
 import { Link } from "react-router-dom";
 
@@ -109,11 +109,8 @@ export default function NoteCard({
             <img src={dislike} width="30" height="30"></img>
           </div>
           <div className="flex gap-10">
-            <Link to="/newspage" className="rounded-lg bg-[#F6911D] w-[53px] h-[40px] text-black pt-3 pb-3 pl-9 pr-9">
-              <img src={zap} width="25" height="25" className="bg-black" />
-            </Link>
-            <Link to="/newspage" className="rounded-lg bg-[#F6911D] w-[53px] h-[40px] text-black pt-3 pb-3 pl-9 pr-9">
-              <img src={eye} width="25" height="25" className="bg-black" />
+            <Link to="/newspage" className="bg-[#F6911D] w-[93px] h-[40px] rounded-3xl flex items-center justify-center">
+              <img src={eye} alt="Logo pegasus" className="w-8 h-6" />
             </Link>
           </div>
         </div>

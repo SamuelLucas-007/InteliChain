@@ -6,9 +6,9 @@ import like from "../assets/like.svg";
 import dislike from "../assets/dislike.svg";
 import zap from "../assets/zap.svg";
 import eye from "../assets/eye.svg";
-import { getPostsRelays } from "../services/filter_news"
-import "./postcard.css"
-
+import { getPostsRelays } from "../services/filter_news";
+import "./postcard.css";
+import { Link } from "react-router-dom";
 
 interface PostProps {
   post: {
@@ -20,19 +20,17 @@ interface PostProps {
   };
 }
 
-const PostCard: React.FC <PostProps> = ({ post }) => {
-//   const [posts, setPosts] = useState(null);
+const PostCard: React.FC<PostProps> = ({ post }) => {
+  //   const [posts, setPosts] = useState(null);
 
+  //   useEffect(() => {
+  //     const fetchData = async () => {
+  //         const data = await getPostsRelays();
+  //         setPosts(data);
+  //     };
 
-//   useEffect(() => {
-//     const fetchData = async () => {
-//         const data = await getPostsRelays();
-//         setPosts(data);
-//     };
-
-//     fetchData();
-// }, []);
-
+  //     fetchData();
+  // }, []);
 
   return (
     <div className="bg-white border-2 border-solid border-gray-200 shadow p-10 rounded w">
@@ -46,14 +44,12 @@ const PostCard: React.FC <PostProps> = ({ post }) => {
           <p className="font-bold">November 2</p>
         </div>
       </div>
-      <div >
+      <div>
         <p className="font-bold text-2xl">My title of post</p>
         <div className="flex justify-center align-center">
-          <img className="mt-4" src={bitcoin} width="350" height="350"/>
+          <img className="mt-4" src={bitcoin} width="350" height="350" />
         </div>
-        <p className="mt-4">
-          {post.content}
-        </p>
+        <p className="mt-4">{post.content}</p>
       </div>
       <div className="flex justify-between mt-10">
         <div className="flex align-center gap-7">
@@ -62,26 +58,22 @@ const PostCard: React.FC <PostProps> = ({ post }) => {
           <img src={dislike} width="30" height="30"></img>
         </div>
         <div className="flex gap-10">
-          <button className="rounded-lg bg-[#F6911D] w-[53px] h-[40px] pt-3 pb-3 pl-9 pr-9">
-            <img src={zap} width="50" height="50"/>
-          </button>
-          <button className="rounded-lg bg-[#F6911D] w-[53px] h-[40px] pt-3 pb-3 pl-9 pr-9" >
-            <img src={eye} width="25" height="25" />
-          </button>
+          <Link to="/create" className="bg-[#F6911D] w-[93px] h-[40px] rounded-3xl flex items-center justify-center">
+            <img src={eye} alt="Logo pegasus" className="w-8 h-6" />
+          </Link>
         </div>
       </div>
     </div>
   );
 };
 
-
 const PostList = () => {
   const [posts, setPosts] = useState<PostProps[] | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
-        const data = await getPostsRelays();
-        setPosts(data);
+      const data = await getPostsRelays();
+      setPosts(data);
     };
 
     fetchData();
@@ -90,7 +82,9 @@ const PostList = () => {
   return (
     <div>
       {posts ? (
-        posts.map((post: any, index: any) => <PostCard key={index} post={post} />)
+        posts.map((post: any, index: any) => (
+          <PostCard key={index} post={post} />
+        ))
       ) : (
         <p>Carregando posts...</p>
       )}
