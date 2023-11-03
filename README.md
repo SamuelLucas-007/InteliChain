@@ -19,7 +19,7 @@ UnJorn website represents an innovative and necessary response to independent jo
 
 ## Documentation
 
-The documentation with information about the project overview, business analysis, system requirements, and system development can be found by <a href="https://docs.google.com/document/d/1aclZiAr7EfSIRo1bg41LDf0NBENUc4BH9Yf_STue-Yc/edit?usp=sharing">Clickring here</a>
+The documentation with information about the project overview, business analysis, system requirements, and system development can be found by <a href="https://github.com/SamuelLucas-007/InteliChain/blob/develop/documents/docs.md">Clickring here</a>
 
 
 ## Technologies
