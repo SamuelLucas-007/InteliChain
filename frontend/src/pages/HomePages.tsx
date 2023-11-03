@@ -1,3 +1,4 @@
+import PostCard from "@/components/postcard";
 import React from "react";
 import ButtonBitcoin from "@/components/buttonBitcoin/ButtonBitcoin";
 import Navbar from "@/components/navbar/Navbar";
@@ -25,10 +26,11 @@ const data = [
 export default function HomePage() {
   return (
     <div>
-        <Navbar/>
-        <Ranking data={data} />
-        <ButtonBitcoin />
-        <TabsDemo/>
+  
+      <Ranking data={data} />
+      <ButtonBitcoin />
+      <TabsDemo/>
     </div>
   );
 }
+
