@@ -22,7 +22,6 @@ const data = [
 export default function HomePage() {
   return (
     <div>
-        <Navbar/>
         <Ranking data={data} />
     </div>
   );
