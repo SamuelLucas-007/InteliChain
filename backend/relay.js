@@ -16,9 +16,9 @@ async function interactWithRelay() {
   // Let's query for an event that exists
   let subQuery = relay.sub([
     {
-        kinds:[2],
+        kinds:[1],
         limit: 5,
-        tags: [ [ 'pais', 'ditadura', 'satsconf' ] ],
+        "#t": [ 'PHDINTELI' ],
     },
   ]);
   subQuery.on('event', event => {
@@ -46,7 +46,7 @@ async function interactWithRelay() {
   let newEvent = {
     kind: 1,
     created_at: Math.floor(Date.now() / 1000),
-    tags: [['pais', 'ditadura', 'satsconf']],
+    tags: [['t','PHDINTELI']],
     content: 'Inteli blockchain will gain the satsconf',
   };
   
