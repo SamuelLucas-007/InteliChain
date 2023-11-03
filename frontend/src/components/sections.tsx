@@ -18,9 +18,9 @@ import {
 
 export function TabsDemo() {
   return (
-    <Tabs defaultValue="account" className="w-[1000px]">
+    <Tabs defaultValue="word" className="w-[1000px] -translate-x-7 flex flex-col justify-center">
       <Label htmlFor="news" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>News</Label>
-      <TabsList className="flex space-x-4">
+      <TabsList className="flex space-x-4 max-w-5xl">
         <TabsTrigger value="word">Word</TabsTrigger>
         <TabsTrigger value="asia">Asia</TabsTrigger>
         <TabsTrigger value="africa">Africa</TabsTrigger>
