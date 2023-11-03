@@ -7,7 +7,7 @@
 
 UnJorn, the social network, harnesses the power of Nostr and Lightning Network technologies to ensure the ownership and security of independent journalists, enabling them to report on issues such as corruption, war, dictatorship, repression, and more.
 
-The UnJorn social network represents a groundbreaking innovation in the realm of independent journalism, making use of the Nostr and Lightning Network technologies to safeguard the interests and security of autonomous journalists worldwide. Its primary objective is to provide a secure and reliable environment in which these talented professionals can fulfill their crucial role in disseminating information regarding sensitive topics like corruption, war, dictatorship, and repression.
+The UnJorn social network represents a groundbreaking innovation in the realm of independent journalism, making use of the Nostr and Lightning Network technologies to safeguard the interests and security of autonomous journalists worldwide. Its primary objective is to provide a secure and reliable environment in which these professionals can fulfill their crucial role in disseminating information regarding sensitive topics like corruption, war, dictatorship, and repression.
 
 The Nostr technology plays a pivotal role in decentralizing the UnJorn network, ensuring that it remains free from control by a single entity, government, or corporation. This guarantees that independent journalists can freely and uncensoredly share their reports and opinions, without the risk of content loss due to external interference.
 
