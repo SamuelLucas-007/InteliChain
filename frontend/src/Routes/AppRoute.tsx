@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./Layout";
+import HomePage from "../pages/HomePages";
 import NewsPage from "./NewsPage";
-import HomePage from "@/pages/HomePages";
 import CreateNews from "@/pages/CreateNews";
 
 export default function AppRoutes() {
