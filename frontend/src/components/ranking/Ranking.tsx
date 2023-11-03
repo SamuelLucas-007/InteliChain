@@ -5,7 +5,7 @@ interface RankingProps {
 
 export default function Ranking({ data, nameCard }: RankingProps) {
   return (
-    <div className="flex w-60 h-50 bg-[#f9f9f9] flex-col justify-start items-center rounded-xl -translate-x-44 mb- translate-y-5">
+    <div className="flex w-60 h-50 bg-[#f9f9f9] flex-col justify-start items-center rounded-xl -translate-x-44 mb- translate-y-6">
       <h1 className="text-black text-center font-inter font-bold text-3xl mb-4 mt-4">{nameCard}</h1>
       <ul className="text-black text-center text-xl">
         {data.map((item, index) => (

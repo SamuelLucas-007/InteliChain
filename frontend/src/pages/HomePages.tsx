@@ -29,8 +29,8 @@ export default function HomePage() {
 			<TabsDemo />
 			<div className="fixed right-2 flex flex-col gap-1">
 				<aside className="fixed -translate-x-[275px] -translate-y-9">
-					<Ranking data={data} nameCard="Top View" />
-					<Ranking data={data} nameCard="Top Sats" />
+					<Ranking data={data} nameCard="Top View"  />
+					<Ranking data={data} nameCard="Top Sats"/>
 					<ButtonBitcoin />
 				</aside>
 			</div>
