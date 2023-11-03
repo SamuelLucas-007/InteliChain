@@ -80,3 +80,10 @@ function pay(apiKey, baseUrl, paymentRequest) {
         console.error(error);
         });
 }
+
+function main() {
+    getSaldo(apiKey, baseUrl);
+}
+
+main();
+
