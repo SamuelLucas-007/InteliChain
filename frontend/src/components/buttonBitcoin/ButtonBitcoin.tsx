@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { useCryptoPriceController, ChainSymbols } from "react-crypto-price";
 import bitcoin from "../../assets/img/bitcoin.svg";
@@ -39,3 +40,12 @@ export default function ButtonBitcoin() {
     </div>
   );
 }
+=======
+export default function ButtonBitcoin(){
+    return (
+        <div>
+            <div className="w-[230px] h-[50px] bg-[#F6911D] rounded-md flex items-center"><h1>$</h1></div>
+        </div>
+    )
+}
+>>>>>>> 426356f063fbd842400af104ab79562c2aacf0ae
