@@ -5,8 +5,14 @@ import fileText from "../../assets/img/file-text.svg";
 import wallet from "../../assets/img/wallet.svg";
 import profile from "../../assets/img/user.svg";
 import ButtonBitcoin from "../buttonBitcoin/ButtonBitcoin";
+import Viewer from "@/pages/Viewer";
 
 export default function Navbar() {
+  
+  const viewerStyle = {
+    fontSize: '24px',
+    marginRight: '20px'
+  };
   return (
     <nav className="w-full py-14 h-20 flex items-center justify-between">
       <div className="flex items-center">
@@ -15,6 +21,9 @@ export default function Navbar() {
             UnJorn
           </h1>
         </Link>
+        <div style={viewerStyle}>
+          <Viewer />
+        </div>
       </div>
       <div className="flex justify-center items-center gap-8 -translate-x-28">
         <ul className="flex font-normal font-inter text-base text-black gap-8">
